@@ -47,7 +47,7 @@ for epoch in range(training_epochs) :
 
 print "Optimization Finished"
 
-# predict number
+# predict number (random)
 r = random.randint(0, mnist.test.num_examples - 1)
 print "Prediction: ", sess.run(tf.argmax(activation,1), {x: mnist.test.images[r:r+1]})
 print "Correct Answer: ", sess.run(tf.argmax(mnist.test.labels[r:r+1], 1))
@@ -55,11 +55,11 @@ print "Correct Answer: ", sess.run(tf.argmax(mnist.test.labels[r:r+1], 1))
 print '-----------------------------------------'
 
 
-# load image data
+# load image data (image 0)
 with tf.gfile.FastGFile("/home/taewoo/Bib_Number/Number_img/img1_easy0.jpg", 'rb') as f:
     image = f.read()
     
-# image processing
+# image processing (image 0)
 decode_image = tf.image.decode_jpeg(image, channels = flags_depth)
 resized_image = tf.image.resize_images(decode_image, flags_height, flags_width, method=1)
 input_image = sess.run(resized_image)
@@ -68,18 +68,18 @@ input_image = sess.run(resized_image)
 input_image = np.asarray(input_image.data, dtype='float32') / 255
 
 
-# image prediction
+# image prediction (image 0)
 input_image = input_image.reshape(1, flags_height * flags_width * flags_depth)
 print "Prediction: ", sess.run(tf.argmax(activation,1), {x: input_image})
 print "Correct Answer: 0"
 
 print '-----------------------------------------'
 
-# load image data
+# load image data (image 1)
 with tf.gfile.FastGFile("/home/taewoo/Bib_Number/Number_img/img1_easy1.jpg", 'rb') as f:
     image = f.read()
     
-# image processing
+# image processing (image 1)
 decode_image = tf.image.decode_jpeg(image, channels = flags_depth)
 resized_image = tf.image.resize_images(decode_image, flags_height, flags_width, method=1)
 input_image = sess.run(resized_image)
@@ -88,18 +88,18 @@ input_image = sess.run(resized_image)
 input_image = np.asarray(input_image.data, dtype='float32') / 255
 
 
-# image prediction
+# image prediction (image 1)
 input_image = input_image.reshape(1, flags_height * flags_width * flags_depth)
 print "Prediction: ", sess.run(tf.argmax(activation,1), {x: input_image})
 print "Correct Answer: 1"
 
 print '-----------------------------------------'
 
-# load image data
+# load image data (image 2)
 with tf.gfile.FastGFile("/home/taewoo/Bib_Number/Number_img/img1_easy2.jpg", 'rb') as f:
     image = f.read()
     
-# image processing
+# image processing (image 2)
 decode_image = tf.image.decode_jpeg(image, channels = flags_depth)
 resized_image = tf.image.resize_images(decode_image, flags_height, flags_width, method=1)
 input_image = sess.run(resized_image)
@@ -108,7 +108,7 @@ input_image = sess.run(resized_image)
 input_image = np.asarray(input_image.data, dtype='float32') / 255
 
 
-# image prediction
+# image prediction (image 2)
 input_image = input_image.reshape(1, flags_height * flags_width * flags_depth)
 print "Prediction: ", sess.run(tf.argmax(activation,1), {x: input_image})
 print "Correct Answer: 2"
@@ -116,11 +116,11 @@ print "Correct Answer: 2"
 
 print '-----------------------------------------'
 
-# load image data
+# load image data (image 3)
 with tf.gfile.FastGFile("/home/taewoo/Bib_Number/Number_img/img1_easy3.jpg", 'rb') as f:
     image = f.read()
     
-# image processing
+# image processing (image 3)
 decode_image = tf.image.decode_jpeg(image, channels = flags_depth)
 resized_image = tf.image.resize_images(decode_image, flags_height, flags_width, method=1)
 input_image = sess.run(resized_image)
@@ -129,7 +129,7 @@ input_image = sess.run(resized_image)
 input_image = np.asarray(input_image.data, dtype='float32') / 255
 
 
-# image prediction
+# image prediction (image 3)
 input_image = input_image.reshape(1, flags_height * flags_width * flags_depth)
 print "Prediction: ", sess.run(tf.argmax(activation,1), {x: input_image})
 print "Correct Answer: 3"
@@ -137,11 +137,11 @@ print "Correct Answer: 3"
 
 print '-----------------------------------------'
 
-# load image data
+# load image data (image 4)
 with tf.gfile.FastGFile("/home/taewoo/Bib_Number/Number_img/img1_easy4.jpg", 'rb') as f:
     image = f.read()
     
-# image processing
+# image processing (image 4)
 decode_image = tf.image.decode_jpeg(image, channels = flags_depth)
 resized_image = tf.image.resize_images(decode_image, flags_height, flags_width, method=1)
 input_image = sess.run(resized_image)
@@ -150,7 +150,7 @@ input_image = sess.run(resized_image)
 input_image = np.asarray(input_image.data, dtype='float32') / 255
 
 
-# image prediction
+# image prediction (image 4)
 input_image = input_image.reshape(1, flags_height * flags_width * flags_depth)
 print "Prediction: ", sess.run(tf.argmax(activation,1), {x: input_image})
 print "Correct Answer: 4"
@@ -158,11 +158,11 @@ print "Correct Answer: 4"
 
 print '-----------------------------------------'
 
-# load image data
+# load image data (image 5)
 with tf.gfile.FastGFile("/home/taewoo/Bib_Number/Number_img/img1_easy5.jpg", 'rb') as f:
     image = f.read()
     
-# image processing
+# image processing (image 5)
 decode_image = tf.image.decode_jpeg(image, channels = flags_depth)
 resized_image = tf.image.resize_images(decode_image, flags_height, flags_width, method=1)
 input_image = sess.run(resized_image)
@@ -171,18 +171,18 @@ input_image = sess.run(resized_image)
 input_image = np.asarray(input_image.data, dtype='float32') / 255
 
 
-# image prediction
+# image prediction (image 5)
 input_image = input_image.reshape(1, flags_height * flags_width * flags_depth)
 print "Prediction: ", sess.run(tf.argmax(activation,1), {x: input_image})
 print "Correct Answer: 5"
 
 print '-----------------------------------------'
 
-# load image data
+# load image data (image 6)
 with tf.gfile.FastGFile("/home/taewoo/Bib_Number/Number_img/img1_easy6.jpg", 'rb') as f:
     image = f.read()
     
-# image processing
+# image processing (image 6)
 decode_image = tf.image.decode_jpeg(image, channels = flags_depth)
 resized_image = tf.image.resize_images(decode_image, flags_height, flags_width, method=1)
 input_image = sess.run(resized_image)
@@ -191,7 +191,7 @@ input_image = sess.run(resized_image)
 input_image = np.asarray(input_image.data, dtype='float32') / 255
 
 
-# image prediction
+# image prediction (image 6)
 input_image = input_image.reshape(1, flags_height * flags_width * flags_depth)
 print "Prediction: ", sess.run(tf.argmax(activation,1), {x: input_image})
 print "Correct Answer: 6"
@@ -199,11 +199,11 @@ print "Correct Answer: 6"
 print '-----------------------------------------'
 
 
-# load image data
+# load image data (image 7)
 with tf.gfile.FastGFile("/home/taewoo/Bib_Number/Number_img/img1_easy7.jpg", 'rb') as f:
     image = f.read()
     
-# image processing
+# image processing (image 7)
 decode_image = tf.image.decode_jpeg(image, channels = flags_depth)
 resized_image = tf.image.resize_images(decode_image, flags_height, flags_width, method=1)
 input_image = sess.run(resized_image)
@@ -212,18 +212,18 @@ input_image = sess.run(resized_image)
 input_image = np.asarray(input_image.data, dtype='float32') / 255
 
 
-# image prediction
+# image prediction (image 7)
 input_image = input_image.reshape(1, flags_height * flags_width * flags_depth)
 print "Prediction: ", sess.run(tf.argmax(activation,1), {x: input_image})
 print "Correct Answer: 7"
 
 print '-----------------------------------------'
 
-# load image data
+# load image data (image 8)
 with tf.gfile.FastGFile("/home/taewoo/Bib_Number/Number_img/img1_easy8.jpg", 'rb') as f:
     image = f.read()
     
-# image processing
+# image processing (image 8)
 decode_image = tf.image.decode_jpeg(image, channels = flags_depth)
 resized_image = tf.image.resize_images(decode_image, flags_height, flags_width, method=1)
 input_image = sess.run(resized_image)
@@ -231,7 +231,7 @@ input_image = sess.run(resized_image)
 
 input_image = np.asarray(input_image.data, dtype='float32') / 255
 
-# image prediction
+# image prediction (image 8)
 input_image = input_image.reshape(1, flags_height * flags_width * flags_depth)
 print "Prediction: ", sess.run(tf.argmax(activation,1), {x: input_image})
 print "Correct Answer: 8"
@@ -239,11 +239,11 @@ print "Correct Answer: 8"
 print '-----------------------------------------'
 
 
-# load image data
+# load image data (image 9)
 with tf.gfile.FastGFile("/home/taewoo/Bib_Number/Number_img/img1_easy9.jpg", 'rb') as f:
     image = f.read()
     
-# image processing
+# image processing (image 9)
 decode_image = tf.image.decode_jpeg(image, channels = flags_depth)
 resized_image = tf.image.resize_images(decode_image, flags_height, flags_width, method=1)
 input_image = sess.run(resized_image)
@@ -254,18 +254,18 @@ input_image = np.asarray(input_image.data, dtype='float32') / 255
 
 input_image = input_image.reshape(1, flags_height * flags_width * flags_depth)
 
-# imaga prediction
+# imaga prediction (image 9)
 print "Prediction: ", sess.run(tf.argmax(activation,1), {x: input_image})
 print "Correct Answer: 9"
 
 print '-----------------------------------------'
 
 
-# load image data
+# load image data (image 1, one more time)
 with tf.gfile.FastGFile("/home/taewoo/Bib_Number/Number_img/img1_easy1.jpg", 'rb') as f:
     image = f.read()
     
-# image processing
+# image processing (image 1, one more time)
 decode_image = tf.image.decode_jpeg(image, channels = flags_depth)
 resized_image = tf.image.resize_images(decode_image, flags_height, flags_width, method=1)
 input_image = sess.run(resized_image)
@@ -276,7 +276,7 @@ input_image = np.asarray(input_image.data, dtype='float32') / 255
 
 input_image = input_image.reshape(1, flags_height * flags_width * flags_depth)
 
-# imaga prediction
+# imaga prediction (image 1, one more time)
 print "Prediction: ", sess.run(tf.argmax(activation,1), {x: input_image})
 print "Correct Answer: 1"
 
